@@ -19,5 +19,4 @@ const AnswerItem = ({ index, handleChange, text, isChecked, handleCheck }) => {
     )
 }
 
-// https://github.com/Jace-Tech/PeaceRydeswork.git
 export default AnswerItem
