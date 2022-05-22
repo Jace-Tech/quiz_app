@@ -1,0 +1,2 @@
+export const MAX_SECONDS_PER_QUESTION = 45
+export const MARK_PER_QUESTION = 20
