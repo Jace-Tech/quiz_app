@@ -7,6 +7,7 @@ import QuestionPage from './pages/QuestionPage'
 import ManageQuiz from './pages/admin/ManageQuiz'
 import ManageQuestions from './pages/admin/ManageQuestions'
 import QuestionDetails from './pages/admin/QuestionDetails'
+import OnBoardPage from './pages/OnBoardPage'
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         {path: '/admin/question', component: <ManageQuestions /> },
         {path: '/admin/question/:id', component: <QuestionDetails /> },
         {path: '/admin/quiz', component: <ManageQuiz /> },
+        {path: '/onboard', component: <OnBoardPage /> },
     ]
 
     return (

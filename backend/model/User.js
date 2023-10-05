@@ -17,7 +17,10 @@ const Student = DB.define('student', {
         allowNull: true,
     },
     password: DataTypes.STRING,
-    dob: DataTypes.DATE,
+    dob: {
+        type: DataTypes.DATE,
+        allowNull: true,
+    },
 })
 
 module.exports = Student

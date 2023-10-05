@@ -2,6 +2,7 @@ import { Box, Container, Heading, Spinner, Text, VStack, useId, Center  } from '
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { endQuiz } from '../api'
 import CheckAnswer from '../components/CheckAnswer'
 import Header from '../components/Header'
 import { MARK_PER_QUESTION } from '../utils'
@@ -16,7 +17,7 @@ const EndQuiz = () => {
     const getMarks = () => {
         if(result) {
             const correctAnswer = [...result].filter(item => item.status)
-            const mark = correctAnswer.length * MARK_PER_QUESTION
+            const mark = Math.floor(correctAnswer.length * MARK_PER_QUESTION)
             setTotalMark(mark)
         }
     }
@@ -47,13 +48,28 @@ const EndQuiz = () => {
         }
     }
 
+    const handleEndQuiz = async () => {
+        const QUIZ = JSON.parse(localStorage.getItem('QUIZ'))
 
-    useEffect(() => {
-        if(!result?.length) navigate("/")
-    }, [result])
+        const data = {
+            ...QUIZ,
+            // answers: result,
+            score: totalMark
+        }
+
+        const result = await endQuiz(data)
+        console.log(result)
+    }
+
     useEffect(() => getMarks(), [result])
     useEffect(() => result && setIsLoading(false), [result])
     useEffect(() => getRemark(), [totalMark])
+
+    useEffect(() => {
+        if(totalMark && result?.length) {
+           handleEndQuiz()
+        }
+    }, [totalMark, result])
 
     return (
         <Box>

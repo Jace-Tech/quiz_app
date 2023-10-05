@@ -54,3 +54,45 @@ export const deleteQuestion = async (id) => {
     }
 
 }
+
+export const createStudent = async (user) => {
+    try {
+        const options = generateOptions(user)
+        const request = await fetch(`${BASE_URL}/student`, options)
+        const response = await request.json()
+        return response
+    }   
+    catch(err) {
+        return {
+            error: err.message
+        }
+    }
+}
+
+export const startQuiz = async (data) => {
+    try {
+        const options = generateOptions(data)
+        const request = await fetch(`${BASE_URL}/quiz/start`, options)
+        const response = await request.json()
+        return response
+    }   
+    catch(err) {
+        return {
+            error: err.message
+        }
+    }
+}
+
+export const endQuiz = async (data) => {
+    try {
+        const options = generateOptions(data)
+        const request = await fetch(`${BASE_URL}/quiz/end`, options)
+        const response = await request.json()
+        return response
+    }   
+    catch(err) {
+        return {
+            error: err.message
+        }
+    }
+}

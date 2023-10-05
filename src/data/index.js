@@ -83,6 +83,237 @@ export const questionsData = [
             },
         ]
     },
+    { 
+        question: "What will be the output of this code strlen(' testing this ') ?",
+        answers: [
+            {
+                answer: "12",
+                correct: false
+            },
+            {
+                answer: "14",
+                correct: true
+            },
+            {
+                answer: "11",
+                correct: false
+            },
+            {
+                answer: "13",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: " Which of these will output `true`?",
+        answers: [
+            {
+                answer: "(true !== true) AND (false !== false) AND ( false === false)",
+                correct: false
+            },
+            {
+                answer: "(false == false) XOR (false !== false) AND (true !== false)",
+                correct: true
+            },
+            {
+                answer: "(false OR true) AND (true XOR true)",
+                correct: false
+            },
+            {
+                answer: "(false == false) XOR (false < true)",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "The variable `$file` is an example of which data type in this code ` $file = fopen('test.txt, 'a+') `?",
+        answers: [
+            {
+                answer: "String",
+                correct: false
+            },
+            {
+                answer: "Array",
+                correct: false
+            },
+            {
+                answer: "Resource",
+                correct: true
+            },
+            {
+                answer: "Object",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "What's the output of this code `5 <=> 2` ?",
+        answers: [
+            {
+                answer: "-1",
+                correct: false
+            },
+            {
+                answer: "0",
+                correct: false
+            },
+            {
+                answer: "1",
+                correct: true
+            },
+            {
+                answer: "None of the above",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "Which of these is incorrect about `for` loop ?",
+        answers: [
+            {
+                answer: "You can't initialize more than one variable in the initialization part",
+                correct: true
+            },
+            {
+                answer: "It increments / decrements the counter at the end of each iteration",
+                correct: false
+            },
+            {
+                answer: "All of the above",
+                correct: false
+            },
+            {
+                answer: "None of the above",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "What is the data type of any conditional expression output",
+        answers: [
+            {
+                answer: "Boolean",
+                correct: true
+            },
+            {
+                answer: "String",
+                correct: false
+            },
+            {
+                answer: "Resource",
+                correct: false
+            },
+            {
+                answer: "None of the above",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "Which of this operators can form a conditional expression",
+        answers: [
+            {
+                answer: "Only Comparision Operators",
+                correct: false
+            },
+            {
+                answer: "Only Logical Operators",
+                correct: false
+            },
+            {
+                answer: "All of the above",
+                correct: true
+            },
+            {
+                answer: "None of the above",
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "The DOT `.` operator in PHP is user for ?",
+        answers: [
+            {
+                answer: "Property accessor",
+                correct: false
+            },
+            {
+                answer: "Fullstop",
+                correct: false
+            },
+            {
+                answer: "String concatenation",
+                correct: true
+            },
+            {
+                answer: "Spread and Rest", 
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "The `NOT` operator falls in which of this category?",
+        answers: [
+            {
+                answer: "Binary",
+                correct: false
+            },
+            {
+                answer: "Tenary",
+                correct: false
+            },
+            {
+                answer: "Unary",
+                correct: true
+            },
+            {
+                answer: "All of the above", 
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "The `NOT` operator falls in which of this category?",
+        answers: [
+            {
+                answer: "Binary",
+                correct: false
+            },
+            {
+                answer: "Tenary",
+                correct: false
+            },
+            {
+                answer: "Unary",
+                correct: true
+            },
+            {
+                answer: "All of the above", 
+                correct: false
+            },
+        ]
+    },
+    { 
+        question: "What is the output of this code `-2 <=> -3`?",
+        answers: [
+            {
+                answer: "0",
+                correct: false
+            },
+            {
+                answer: "-1",
+                correct: false
+            },
+            {
+                answer: "1",
+                correct: true
+            },
+            {
+                answer: "All of the above", 
+                correct: false
+            },
+        ]
+    },
 
 ]
 

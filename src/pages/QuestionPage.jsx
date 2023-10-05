@@ -124,9 +124,6 @@ const QuestionPage = () => {
             // Trigger the Loading Spinner
             setIsLoading(true)
 
-            // Set localstorage
-            localStorage.setItem("QUIZ_FINISHED", true)
-
             setTimeout(() => {
                 // Redirect to endquiz
                 navigate("/endquiz")
@@ -150,9 +147,9 @@ const QuestionPage = () => {
 
     // Check taken quiz
     useEffect(() => {
-        const hasWriten = localStorage.getItem("QUIZ_FINISHED")
+        const hasWriten = localStorage.getItem("QUIZ_DATA")
 
-        if(hasWriten == 'true') {
+        if(hasWriten.finished == 'true') {
             navigate("/")
         }
     }, [])
